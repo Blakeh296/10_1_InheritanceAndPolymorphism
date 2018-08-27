@@ -51,10 +51,12 @@
             this.lblCarModel = new System.Windows.Forms.Label();
             this.lblCarMake = new System.Windows.Forms.Label();
             this.btnCreateObject = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nextTutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbInput.SuspendLayout();
             this.gbOutPut.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textbox1
@@ -76,7 +78,7 @@
             this.gbInput.Controls.Add(this.tbCarMileage);
             this.gbInput.Controls.Add(this.tbCarModel);
             this.gbInput.Controls.Add(this.textbox1);
-            this.gbInput.Location = new System.Drawing.Point(40, 12);
+            this.gbInput.Location = new System.Drawing.Point(42, 55);
             this.gbInput.Name = "gbInput";
             this.gbInput.Size = new System.Drawing.Size(200, 164);
             this.gbInput.TabIndex = 1;
@@ -168,9 +170,9 @@
             this.gbOutPut.Controls.Add(this.lblCarMileage);
             this.gbOutPut.Controls.Add(this.lblCarModel);
             this.gbOutPut.Controls.Add(this.lblCarMake);
-            this.gbOutPut.Location = new System.Drawing.Point(40, 183);
+            this.gbOutPut.Location = new System.Drawing.Point(270, 46);
             this.gbOutPut.Name = "gbOutPut";
-            this.gbOutPut.Size = new System.Drawing.Size(200, 199);
+            this.gbOutPut.Size = new System.Drawing.Size(200, 210);
             this.gbOutPut.TabIndex = 2;
             this.gbOutPut.TabStop = false;
             this.gbOutPut.Text = "Object Properties";
@@ -267,51 +269,61 @@
             // 
             // btnCreateObject
             // 
-            this.btnCreateObject.Location = new System.Drawing.Point(42, 390);
+            this.btnCreateObject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateObject.Location = new System.Drawing.Point(136, 225);
             this.btnCreateObject.Name = "btnCreateObject";
-            this.btnCreateObject.Size = new System.Drawing.Size(75, 41);
+            this.btnCreateObject.Size = new System.Drawing.Size(106, 31);
             this.btnCreateObject.TabIndex = 3;
             this.btnCreateObject.Text = "Create Object";
             this.btnCreateObject.UseVisualStyleBackColor = true;
             this.btnCreateObject.Click += new System.EventHandler(this.btnCreateObject_Click);
             // 
-            // btnExit
+            // menuStrip1
             // 
-            this.btnExit.Location = new System.Drawing.Point(123, 388);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 41);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nextTutorialToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(483, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button1
+            // nextTutorialToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(204, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Next Tutorial";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.nextTutorialToolStripMenuItem.Name = "nextTutorialToolStripMenuItem";
+            this.nextTutorialToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.nextTutorialToolStripMenuItem.Text = "&Next Tutorial";
+            this.nextTutorialToolStripMenuItem.Click += new System.EventHandler(this.nextTutorialToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "&Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // CarDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 439);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(483, 439);
             this.Controls.Add(this.btnCreateObject);
             this.Controls.Add(this.gbOutPut);
             this.Controls.Add(this.gbInput);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "CarDemo";
             this.Text = "Form1";
             this.gbInput.ResumeLayout(false);
             this.gbInput.PerformLayout();
             this.gbOutPut.ResumeLayout(false);
             this.gbOutPut.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -340,8 +352,9 @@
         private System.Windows.Forms.Label lblCarModel;
         private System.Windows.Forms.Label lblCarMake;
         private System.Windows.Forms.Button btnCreateObject;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nextTutorialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

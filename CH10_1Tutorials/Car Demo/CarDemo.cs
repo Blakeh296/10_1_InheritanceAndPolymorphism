@@ -19,8 +19,8 @@ namespace Car_Demo
         Automobile automobile = new Automobile();
         private void btnCreateObject_Click(object sender, EventArgs e)
         {
-            
 
+            
             // Get the car data
             GetCarData(automobile);
 
@@ -81,16 +81,16 @@ namespace Car_Demo
                 MessageBox.Show("Invalid Mileage");
             }
         }
-        
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void nextTutorialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CD_AccountTest nextForm = new CD_AccountTest();
             nextForm.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 
